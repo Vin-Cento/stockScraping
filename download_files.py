@@ -13,7 +13,7 @@ driver = webdriver.Chrome()
 
 ### using tickers from tickers.txt to create a list of links
 urls = list()
-with open('tickersR.txt','r') as ticker_file:
+with open('tickers.txt','r') as ticker_file:
     tickers = ticker_file.readline().split(" ")
     urls = ["https://finance.yahoo.com/quote/%s/history?period1=1589155200&period2=1589241600&interval=1d&filter=history&frequency=1d"%ticker for ticker in tickers]
 
